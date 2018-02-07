@@ -7,6 +7,7 @@
 - 지금은 깃허브에 의해 개발
 - 원래 웹 애플리케이션을 위해 개발된 프런트엔드와 백엔드 구성 요소를 사용하여 데스크톱 그래픽 사용자 인터페이스 애플리케이션의 개발 가능
 - 백엔드로는 Node.js 런타임을, 프론트엔드로는 크로미엄을 사용
+- javascript 기반으로 진입 장벽이 낮고 이미 javascript를 다룰줄 아는 사람은 간단하게 데스크톱 앱을 만들 수 있음
 - 상용화된 프로그램
 
     ![atom](https://electronjs.org/node_modules/electron-apps/apps/atom/atom-icon-64.png "atom") Atom
