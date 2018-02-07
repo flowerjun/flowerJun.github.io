@@ -55,7 +55,7 @@ Electron을 아래와 같이 설치합니다.
 ## 3. main.js 작성
 main.js 파일을 package.json파일과 같은 경로에 아래와 같이 작성합니다.
 
-```
+```javascript
 // app모듈과, BrowserWindow 모듈 할당
 const {app, BrowserWindow, ipcMain} = require('electron');
 let win;
@@ -128,7 +128,7 @@ app.on('ready', () => {
 ```
 
 ## 5. index.js 작성
-```
+```javascript
 const {ipcRenderer, shell} = require('electron');
 
 ipcRenderer.send('trumpiaContacts', 'start');
