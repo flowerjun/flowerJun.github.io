@@ -20,6 +20,8 @@
     ![whatsApp](https://electronjs.org/node_modules/electron-apps/apps/whatsapp/whatsapp-icon-64.png "whatsApp") WhatsApp
 
 등...
+
+[Electron Docs / API 참고](https://electronjs.org/docs/api)
 ## 1. Project폴더 생성 후 package.json 작성하기
 
 앞서 Node.js를 설치 하였기 때문에 **npm init** 명령어가 가능.
