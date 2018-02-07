@@ -31,7 +31,7 @@ package.json을 생성한 후 아래와 같이 수정(주석 제외, 주석 포�
 **package.json**
 ```
      {
-        "name": "T-Address book",
+        "name": "T-Address_book",
         "version": "1.0.0",
         "description": "Trumpia Address book",
         "main": "main.js",          //entry point
