@@ -200,7 +200,7 @@ function makeAddr(data) {
     $ npm install electron-packager --save-dev # npm 스크립트로 사용
     $ npm install electron-packager -g # 전역 모듈로 설치
     
-    $ electron-packager ./ myApp --platform=win32 --arch x64 \ --out dist \ --prune
+    ex) $ electron-packager ./ myApp --platform=win32 --arch x64 \ --out dist \ --prune
     ```
 
 2. 어플리케이션 패키징(asar)
@@ -209,7 +209,7 @@ function makeAddr(data) {
     
     ```
     $ npm install -g asar
-    $ asar pack app app.asar
+    ex) $ asar pack app app.asar
     ```
 
 3. 설치파일 만들기: Windows
@@ -217,7 +217,7 @@ function makeAddr(data) {
     
     ```    
     $ npm install --save-dev electron-winstaller
-    $ node installer.js
+    ex) $ node installer.js
     ```
 
 
