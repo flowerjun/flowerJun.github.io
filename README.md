@@ -192,6 +192,7 @@ function makeAddr(data) {
 ## 6. 배포 (Window 기준)
 1. 어플리케이션 패키징(electron-pacakger)
  - Electron 프로그램을 .app 또는 .exe 와 같은 실행 파일로 만들어 줌
+    
     ```
     $ npm install electron-packager --save-dev # npm 스크립트로 사용
     $ npm install electron-packager -g # 전역 모듈로 설치
@@ -202,6 +203,7 @@ function makeAddr(data) {
 2. 어플리케이션 패키징(asar)
  - electron으로 제작한 프로그램을 사용하기 위해서는, node_modules 을 포함한 모든 파일을 옮겨주어야 한다. 간혹 Windows에서 node_modules 등에서 긴 경로 이름으로 인해 복사가 안되는 오류가 발생하는데 이와 같은 문제를 완화하기 위해 electron 어플리케이션 패키징을 할 때는 asar 아카이브로 패키징
  - asar를 사용하는 또 다른 이유는 소스코드 전체를 복사해서 배포하는 것과 별개로 asar 아카이브를 통해 어플리케이션 소스 코드가 사용자에게 노출되는 것을 방지 할 수 있기 때문이다. asar가 tar과 비슷한 포맷이기 때문에 내부 소스가 암호화되어 패키징 되는 것은 아니어서 코드를 보려면 어렵지않게 확인 할 수 있지만, 소스코드 전체를 폴더구조로 공유하는 것 
+    
     ```
     $ npm install -g asar
     $ asar pack app app.asar
@@ -209,6 +211,7 @@ function makeAddr(data) {
 
 3. 설치파일 만들기: Windows
  - Windows Setup 파일을 만들어 줌.
+    
     ```    
     $ npm install --save-dev electron-winstaller
     $ node installer.js
