@@ -2,7 +2,7 @@
 
 # Tech Group - Electron
 
-## Electron이란
+## Electron이란111
 - 일렉트론은 Cheng Zhao가 개발한 오픈 소스 프레임워크
 - 지금은 깃허브에 의해 개발
 - 원래 웹 애플리케이션을 위해 개발된 프런트엔드와 백엔드 구성 요소를 사용하여 데스크톱 그래픽 사용자 인터페이스 애플리케이션의 개발 가능
@@ -13,7 +13,7 @@
     ![atom](https://electronjs.org/node_modules/electron-apps/apps/atom/atom-icon-64.png "atom") Atom
     ![slack](https://electronjs.org/node_modules/electron-apps/apps/slack/slack-icon-64.png "slack") Slack
     ![vsc](https://electronjs.org/node_modules/electron-apps/apps/visual-studio-code/visual-studio-code-icon-64.png "vsc") Visual Studio Code
-    ![postman](https://electronjs.org/node_modules/electron-apps/apps/postman/postman-icon-64.png "postman") Postman 
+    ![postman](https://electronjs.org/node_modules/electron-apps/apps/postman/postman-icon-64.png "postman") Postman
     ![gitHub](https://electronjs.org/node_modules/electron-apps/apps/github-desktop/github-desktop-icon-64.png "gitHub") GitHub Desktop
     ![twitch](https://electronjs.org/node_modules/electron-apps/apps/twitch/twitch-icon-64.png "twitch") Twitch
     ![skype](https://electronjs.org/node_modules/electron-apps/apps/skype/skype-icon-64.png "skype") Skype
@@ -25,7 +25,7 @@
 ## 1. Project폴더 생성 후 package.json 작성하기
 
 앞서 Node.js를 설치 하였기 때문에 **npm init** 명령어가 가능.
-커맨드 창에서 프로젝트 경로로 진입 한 후 **npm init -y** 명령어로 기본 package.json 파일을 생성. 
+커맨드 창에서 프로젝트 경로로 진입 한 후 **npm init -y** 명령어로 기본 package.json 파일을 생성.
 -y 옵션은 기본값으로 package.json을 생성하는 옵션.
 
 package.json을 생성한 후 아래와 같이 수정(주석 제외, 주석 포함시 에러발생).
@@ -68,14 +68,14 @@ app.on('ready', () => {
             width : 800
             , minWidth:330
             , height :600
-            , minHeight: 450 
+            , minHeight: 450
             , show: false
             , icon: __dirname + '/app/resources/installer/Trum.ico'
-            , webPreferences :{ 
+            , webPreferences :{
                 defaultFontSize : 14
             }
     });
-    
+
     win.once('ready-to-show', () => {
         win.show();
     });
@@ -138,7 +138,7 @@ ipcRenderer.send('trumpiaContacts', 'start');
 
 let contacts;
 ipcRenderer.on('loadContacts', (event, arg) => {
-    if (arg) 
+    if (arg)
         makeAddr(arg);
         // 처음 실행 시 맨 앞으로 이동.
         $(".flip-nav-category:eq(0)").find("li.flip-nav-item:eq(0)").find("a").click();
@@ -165,7 +165,7 @@ function makeAddr(data) {
         li.attr("data-flip-category", item.team);
         li.attr("title", item.name);
         li.attr("id", item.id);
-        
+
         li.find('a')
             .attr('href', "")
             .html(item.name + "<br/>" + item.phone + "<br/>" + item.email + "<br/>" + item.skype);
@@ -195,18 +195,18 @@ function makeAddr(data) {
 ## 6. 배포 (Window 기준)
 1. 어플리케이션 패키징(electron-pacakger)
  - Electron 프로그램을 .app 또는 .exe 와 같은 실행 파일로 만들어 줌
-    
+
     ```
     $ npm install electron-packager --save-dev # npm 스크립트로 사용
     $ npm install electron-packager -g # 전역 모듈로 설치
-    
+
     ex) $ electron-packager ./ myApp --platform=win32 --arch x64 \ --out dist \ --prune
     ```
 
 2. 어플리케이션 패키징(asar)
  - electron으로 제작한 프로그램을 사용하기 위해서는, node_modules 을 포함한 모든 파일을 옮겨주어야 한다. 간혹 Windows에서 node_modules 등에서 긴 경로 이름으로 인해 복사가 안되는 오류가 발생하는데 이와 같은 문제를 완화하기 위해 electron 어플리케이션 패키징을 할 때는 asar 아카이브로 패키징
- - asar를 사용하는 또 다른 이유는 소스코드 전체를 복사해서 배포하는 것과 별개로 asar 아카이브를 통해 어플리케이션 소스 코드가 사용자에게 노출되는 것을 방지 할 수 있기 때문이다. asar가 tar과 비슷한 포맷이기 때문에 내부 소스가 암호화되어 패키징 되는 것은 아니어서 코드를 보려면 어렵지않게 확인 할 수 있지만, 소스코드 전체를 폴더구조로 공유하는 것 
-    
+ - asar를 사용하는 또 다른 이유는 소스코드 전체를 복사해서 배포하는 것과 별개로 asar 아카이브를 통해 어플리케이션 소스 코드가 사용자에게 노출되는 것을 방지 할 수 있기 때문이다. asar가 tar과 비슷한 포맷이기 때문에 내부 소스가 암호화되어 패키징 되는 것은 아니어서 코드를 보려면 어렵지않게 확인 할 수 있지만, 소스코드 전체를 폴더구조로 공유하는 것
+
     ```
     $ npm install -g asar
     ex) $ asar pack app app.asar
@@ -214,7 +214,7 @@ function makeAddr(data) {
 
 3. 설치파일 만들기: Windows
  - Windows Setup 파일을 만들어 줌.
-    
+
     ```    
     $ npm install --save-dev electron-winstaller
     ex) $ node installer.js
@@ -226,20 +226,20 @@ function makeAddr(data) {
     ```
     # delete older files
     rmdir ./dist/trumpiaApp-win32-x64 (rm -rf dist)
-    
+
     # windows exe pacakaging
     electron-packager ./ trumpiaApp --platform=win32 --arch x64 --out dist --prune
-    
+
     # asar packaging
     asar pack ./dist/trumpiaApp-win32-x64/resources/app ./dist/trumpiaApp-win32-x64/resources/app.asar
-    
+
     # delete source dir
     rmdir ./dist/trumpiaApp-win32-x64/resources/app
     (rm -rf ./dist/trumpiaApp-win32-x64/resources/app)
-    
+
     # create installer
     node installer.js
     ```
-### 참고 사이트 
+### 참고 사이트
 #### [배포 참고 https://proinlab.com/archives/1928](https://proinlab.com/archives/1928)
-#### [배포 참고 https://github.com/cionman/03_Electron_Distribution](https://github.com/cionman/03_Electron_Distribution) 
+#### [배포 참고 https://github.com/cionman/03_Electron_Distribution](https://github.com/cionman/03_Electron_Distribution)
