@@ -1,7 +1,7 @@
-title: Long Haul
-description: Long Form Jekyll theme built with SASS / COMPASS / SUSY
+title: flowerJun
+description: Development Blog of the flowerJun
 
-url: http://brianmaierjr.github.com/long-haul
+url: https://flowerjun.github.com/
 baseurl: ""
 paginate_path: "blog/page:num/"
 permalink: blog/:title/
@@ -16,13 +16,11 @@ navigation:
    url: /index.html
  - title: About
    url: /about
- - title: Contact
-   url: /contact
 
 social:
-   github: brianmaierjr
-   twitter: brianmaierjr
-   facebook: brianmaierjr
-   email: brimaidesigns@gmail.com
+   github: flowerJun
+   twitter:
+   facebook:
+   email: junho2451@icloud.com
 
 google_analytics: "UA-58263416-1"
