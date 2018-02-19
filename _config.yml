@@ -1,7 +1,7 @@
 title: flowerJun
 description: Development Blog of the flowerJun
 
-url: https://flowerjun.github.com/
+url: https://flowerjun.github.io/
 baseurl: ""
 paginate_path: "blog/page:num/"
 permalink: blog/:title/
