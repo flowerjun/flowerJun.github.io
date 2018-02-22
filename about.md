@@ -1,11 +1,11 @@
 ---
 layout: default
-title: About Long Haul
+title: About flowerJun
 ---
 
 <div class="post">
-	<h1 class="pageTitle">About Long Haul</h1>
-	<img src="{{ '/assets/img/touring.jpg' | prepend: site.baseurl }}" alt="">
+	<h1 class="pageTitle">About flowerJun</h1>
+	<p style="text-align: center;"><img src="{{ '/assets/img/flowerJun.png' | prepend: site.baseurl }}" alt="" style=""></p>
 	<p class="intro">Long Haul is a minimal, long form <a href="http://jekyllrb.com">Jekyll</a> Theme. It can be used as is or customized to your hearts desire.</p>
 	<p>Long Haul was created in honor of all the hard working touring bicycles that have traversed the globe time and time again. Take it for a spin.</p>
 	<h2>Features</h2>
